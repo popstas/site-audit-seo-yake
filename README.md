@@ -5,3 +5,5 @@ Add keywords from main page text.
 ## Fields
 - Yake, Extracted keywords
 - Text language
+
+Thanks to [lucmichalski](https://github.com/lucmichalski).
