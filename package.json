@@ -1,7 +1,7 @@
 {
   "name": "site-audit-seo-yake",
   "description": "Plugin for site-audit-seo, add keywords from main page text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "site-audit-seo": {
     "plugins": {
       "yake": {
