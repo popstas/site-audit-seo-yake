@@ -68,7 +68,15 @@ async function afterRequest(result, options) {
           text: cleanedArticleArr.join(' '),
         });
       } catch (e) {
-        console.error('Failed request to Yake: ' + e.response.data);
+        console.error(`${result.response.url}: Failed request to Yake`);
+        if (e.errno) {
+          console.error(e.toString());
+          if (e.code === 'ECONNREFUSED') {
+            console.error(`Check ${config.serverUrl}`);
+          }
+          return;
+        }
+        console.error(e.response.data);
         if (e.response.data === 'Language not supported') {
           console.log('result.yake_detectedLanguage: ', result.yake_detectedLanguage);
         }
